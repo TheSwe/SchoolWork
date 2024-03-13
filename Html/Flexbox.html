@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <link rel=icon type=image/x-icon href=stockholmimitthjarta.png>
+    <title>My Website</title>
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: aqua;
+            /*flex-direction: column;*/
+        }
+        .flex-container > div {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        .litenbox {
+            flex-grow: 1;
+        }
+        .storbox {
+            flex-grow: 4;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+        <div class="litenbox">1</div>
+        <div class="storbox">1</div>
+        <div class="litenbox">1</div>
+    </div>
+    <div class="flex-container">
+        <div class="litenbox">1</div>
+        <div class="litenbox">1</div>
+    </div>
+  </body>
+</html>

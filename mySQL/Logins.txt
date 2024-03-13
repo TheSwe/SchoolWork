@@ -1,0 +1,4 @@
+Root password: DASE32&&g
+
+User: admin
+password: M;M;aa!2

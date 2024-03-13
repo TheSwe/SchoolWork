@@ -1,0 +1,26 @@
+tr{
+	background-color: #D9D9D9;
+}
+tr:nth-child(even) {
+	background-color: #F2F2F2;
+}
+th, td {
+  border: 2px solid #333333;
+  border-radius: 5px;
+  padding-top:4px;
+  padding-bottom:4px;
+  padding-left:8px;
+  padding-right:8px;
+}
+myHeader{
+	background-color: #062047;
+	color: #e8f1ff;
+}
+.vaticanstaten{
+	background-color: #092e66;
+	color: #ffffff;
+}
+.monaco{
+	background-color: #5e1212;
+	color: #ffffff;
+}

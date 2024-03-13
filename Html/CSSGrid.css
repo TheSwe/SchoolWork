@@ -1,0 +1,29 @@
+.back{
+    background-image:url("Stockholmimitthjarta.png");
+}
+body{
+    background-image:url("EdgerunnersSida/ImgFolder/Background.png");
+}
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+      'topleft top top topright'
+      'left main main right'
+      'bottom bottom bottom bottom';
+  }
+  
+.item1 { grid-area: top;}
+.item2 { grid-area: topleft;}
+.item3 { grid-area: topright;}
+.item4 { grid-area: main;}
+.item5 { grid-area: left;}
+.item6 { grid-area: right;}
+.item7 { grid-area: bottom;}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}

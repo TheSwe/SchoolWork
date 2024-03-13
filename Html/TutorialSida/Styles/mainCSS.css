@@ -1,0 +1,111 @@
+/*Arvid Kågedal
+Te21A*/
+@font-face {
+  font-family: Omotenashi;
+  src: url(../FontFolder/Omotenashi.woff);
+}
+/*General*/
+body{
+    background-color: darkgray;
+    font-family: Omotenashi;
+}
+.gridContainer {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+      'top top top'
+      'sidebar main ads'
+      'bottom bottom bottom';
+    
+}
+.gridContainer > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*Top*/
+.itemTop { grid-area: top;}
+#cornerLogo{
+  width: 40vw;
+  border: 5px solid black;
+}
+.flexGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: flex-right;
+  margin: 0 20px 0 20px;
+  align-items: center;
+}
+.category{
+  width: 15vw;
+  object-fit: contain;
+}
+/*Sidebar*/
+.itemSidebar { 
+  grid-area: sidebar;
+}
+#sidebar {
+  width: 20vw;
+  height: 50vh;
+  border:none;
+}
+/*Main*/
+.itemMain { 
+  grid-area: main;
+  width: 55vw;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#mainIframe {
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+  border: none;
+}
+/*Ads*/
+.itemAds { 
+  grid-area: ads;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: auto;
+  object-fit: contain;
+  width: 20vw;
+  justify-items: center;
+  grid-template-rows:90vh 90vh;
+}
+.adGrid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto;
+  justify-items: center;
+  align-items: center;
+  border: 5px solid black;
+  width: calc(20vw - 20px);
+}
+.ad{
+  object-fit: contain;
+  overflow: hidden;
+  max-width: 18vw;
+  max-height: 50vh;
+}
+/*Bottom*/
+.itemBottom { 
+  grid-area: bottom;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.bottomLogo {
+  width: 20vw;
+}
+
+/*TutorialPages*/
+.tutorialImg{
+  width: 80vw;
+  height:auto;
+
+}

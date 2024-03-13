@@ -1,0 +1,32 @@
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+      'one three'
+      'two three';
+  }
+  .one { 
+    grid-area: one;
+    border: 1px solid red;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    color: blue;
+    }
+    
+  .two { 
+    grid-area: two;
+    border: 1px solid red;
+    text-align: center;
+    padding: 20px 20px 20px 100px;
+    border-radius: 25px;
+    color: blue;
+    }
+  .three { 
+    grid-area: three;
+    border: 1px dashed red;
+    padding: 100px 20px 20px 20px;
+    text-align: center;
+    color: blue;
+    }
+  

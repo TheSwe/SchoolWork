@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+</script>
+</head>
+<body>
+
+<h1>JS object</h1>
+<h2>And events</h2>
+
+<p id="p1" onmouseover="show(true)" onmouseout="show(false)">hover me</p>
+<p id="p2" onmouseenter="enter()">p2</p>
+
+
+<script>
+// Create an object:
+const person1 = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+const person2 = {
+	firstName:"Eva", 
+	lastName:"Andersson", 
+	age:21, 
+	eyeColor:"brown", 
+	fullName : function() {
+			return this.firstName + " " + this.lastName;
+		}
+	};
+
+function show(input) {
+	if(input){
+		document.getElementById("p1").innerHTML = person1.firstName + " " +person1.lastName;
+	} else{
+		document.getElementById("p1").innerHTML = "hover me again";
+	}
+}
+
+function enter(){
+	document.getElementById("p2").innerHTML = person2.fullName();
+}
+
+/*
+För mer om object:
+https://www.w3schools.com/js/js_objects.asp
+
+För mer om events:
+https://www.w3schools.com/js/js_events.asp
+https://www.w3schools.com/jsref/dom_obj_event.asp
+
+Bra exempel:
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onkeyup
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onmouseover
+
+*/
+
+
+</script>
+
+</body>
+</html>

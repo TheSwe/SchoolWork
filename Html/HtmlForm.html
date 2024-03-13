@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Html Forms</title>
+  </head>
+  <body>
+    <form action="" target="_blank" method="get">
+      <fieldset>
+        <legend>Personal information:</legend>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" required><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required autofocus><br>
+      </fieldset>  
+      <label for="startmonth">When did you start school?</label><br>
+      <input name="startmonth" type="month"><br>
+      <textarea readonly>pofiuwaharölöfLHEOÖAFIHRFAJLFOHI</textarea>
+        <div>Have you spent more than an hour with your pet this week?</div>
+        <label for="petTimeYes">Yes</label>
+        <input type="radio" id="petTimeYes" name="petTime" required>
+        <label for="petTimeNo">No</label>
+        <input type="radio" id="petTimeNo" name="petTime" required checked><br>
+
+        <label for="petCount">How many pets du you have:</label>
+        <input type="number" id="petCount" name="petCount" min="0" max="20" required><br>
+
+        <div>What pets do you have?</div>
+        <label for="petCat">Cat</label>
+        <input type="checkbox" id="petCat" name="petCat"><br>
+        <label for="petDog">Dog</label>
+        <input type="checkbox" id="petDog" name="petDog"><br>
+        <label for="petOther">Other</label>
+        <input type="checkbox" id="petOther" name="petOther"><br><br>
+
+        <input list="pets" name="pets"><br>
+        <datalist id="pets">
+          <option value="Dof">
+          <option value="Cat">
+          <option value="Other">
+        </datalist>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6" required><br>
+
+        <label for="telNr">Phone Number:</label>
+        <input type="tel" id="telNr" name="telNr" pattern="[0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required><br><br>
+
+        <input type="file" name="img" accept=".png, .jpg">
+
+        <input type="submit" value="Submit">
+    </form>
+  </body>
+</html> 

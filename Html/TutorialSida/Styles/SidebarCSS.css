@@ -1,0 +1,7 @@
+@font-face {
+    font-family: Omotenashi;
+    src: url(../FontFolder/Omotenashi.woff);
+  }
+  body{
+      font-family: Omotenashi;
+  }

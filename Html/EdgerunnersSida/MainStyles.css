@@ -1,0 +1,192 @@
+body {
+    background-image: url('ImgFolder/Background.png');
+}
+#splashText{
+    border: 3px solid #00ffff;
+}
+#charImg{
+    width: 30vw; 
+    height: auto;
+    
+    border: 3px solid #00ffff;
+}
+#charImgPad{
+    padding: 20px;
+}
+#charlist{
+    border: 3px solid #00ffff;
+    padding: 8px;
+}
+#charlistbox{
+    margin: auto;
+}
+
+.header {
+	background-color: #000000;
+	text-align: center;
+	color: #ffffff;
+	margin: auto;
+    width: 50%;
+    padding: 5px;
+	font-family: cyberway_riders;
+	letter-spacing: 3.5px;
+}
+.bodyText{
+	border: 3px solid #00ffff;
+	background-color: #062047;
+	color: #e8f1ff;
+	padding-top:4px;
+    padding-bottom:4px;
+    padding-left:8px;
+    padding-right:8px;
+    font-size: 150%;
+	font-family: val_blanc;
+}
+.link{
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    padding-right: 5px;
+}
+.charachterImg{
+	width:200px; 
+    height: auto;
+}
+.charachterImgPad{
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.listImg{
+	width:50px; 
+    height: auto;
+    padding-top: 10px;
+}
+.listText{
+	color: #ffffff;
+	font-family: val_blanc;
+    font-size: 200%;
+    background-color: #000000;
+}
+.box {
+	padding-bottom: 15px;
+	display: flex;
+	align-items:center;
+}
+.davidBorder{
+    border: 3px solid #fbff00;
+    background-color: #181800;
+}
+#david{
+    color: #fdffa3;
+}
+.lucyBorder{
+    border: 3px solid #f18bff;
+    background-color: #1b101e;
+}
+#lucy{
+    color: #f8c6ff;
+}
+.maineBorder{
+    border: 3px solid #d10000;
+    background-color: #1b0000;
+}
+#maine{
+    color: #c48e8e;
+}
+.rebeccaBorder{
+    border: 3px solid #2c99ff;
+    background-color: #061523;
+}
+#rebecca{
+    color: #a7d4ff;
+}
+.charactherSplash{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60vw;
+}
+.charactherSplashPad{
+	padding-top: 10px;
+    padding-bottom: 10px;
+}
+.relationships{
+    width: 20vw;
+}
+#davidSiteHeading{
+    border: 3px solid #fbff00;
+    background-color: #181800;
+	text-align: center;
+	color: #fdffa3;
+	margin: auto;
+    width: 80%;
+    padding: 5px;
+	font-family: cyberway_riders;
+	letter-spacing: 3.5px;
+}
+#lucySiteHeading{
+    border: 3px solid #f18bff;
+    background-color: #1b101e;
+	text-align: center;
+	color: #f8c6ff;
+	margin: auto;
+    width: 80%;
+    padding: 5px;
+	font-family: cyberway_riders;
+	letter-spacing: 3.5px;
+}
+#maineSiteHeading{
+    border: 3px solid #d10000;
+    background-color: #1b0000;
+	text-align: center;
+	color: #c48e8e;
+	margin: auto;
+    width: 80%;
+    padding: 5px;
+	font-family: cyberway_riders;
+	letter-spacing: 3.5px;
+}
+#rebeccaSiteHeading{
+    border: 3px solid #2c99ff;
+    background-color: #061523;
+	text-align: center;
+	color: #a7d4ff;
+	margin: auto;
+    width: 80%;
+    padding: 5px;
+	font-family: cyberway_riders;
+	letter-spacing: 3.5px;
+}
+
+
+@font-face {
+    font-family: 'cyberway_riders';
+    src: url('FontFolder/cyberwayriders-lg97d-webfont.woff2') format('woff2'),
+         url('FontFolder/cyberwayriders-lg97d-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'methanerse';
+    src: url('FontFolder/methanersefreetrial-ezx7x-webfont.woff2') format('woff2'),
+         url('FontFolder/methanersefreetrial-ezx7x-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'val_blanc_bold';
+    src: url('FontFolder/valblancbold-x3wp-webfont.woff2') format('woff2'),
+         url('FontFolder/valblancbold-x3wp-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'val_blanc';
+    src: url('FontFolder/valblanc-l3l5-webfont.woff2') format('woff2'),
+         url('FontFolder/valblanc-l3l5-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
