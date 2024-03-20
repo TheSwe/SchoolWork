@@ -1,4 +1,4 @@
-package main.java.Klasser;
+package Klasser;
 
 public abstract class FillableShape {
     boolean isFilled;

@@ -1,4 +1,4 @@
-package main.java.Klasser;
+package Klasser;
 
 import Klasser.*;
 
