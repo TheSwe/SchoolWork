@@ -1,3 +1,4 @@
+
 create table user(
 userName varchar(255),
 userPassword varchar(255),
