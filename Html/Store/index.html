@@ -1,85 +1,122 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <link rel=icon type=image/x-icon href="img-folder/favicon.ico">
-        <title>place123holder</title>
+    <link rel=icon type=image/x-icon href="img-folder/favicon.ico">
+    <title>place123holder</title>
 
-        <link rel="stylesheet" href="style-folder/style.css">
+    <link rel="stylesheet" href="style-folder/style.css">
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    </head>
-    <body>
-        <!--Navbar from file-->
-        <div id="nav-placeholder"></div>
-        <script>
-        $(function(){
-        $("#nav-placeholder").load("navbar.html");
-        });
-        </script>
+  </head>
+  <body class="body-bg">
+    <!--Navbar from file-->
+    <div id="nav-placeholder"></div>
+    <script>
+    $(function(){
+    $("#nav-placeholder").load("navbar.html");
+    });
+    </script>
 
-        <!--Carousel-->
-        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" ></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" ></button>
+    <!--Carousel-->
+    <div id="myCarousel" class="carousel slide my-4 px-3" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img-folder/minecraft-img1.jpg" class = "d-block d-lg-none img-fluid">
+          <img src="img-folder/minecraft-img1-lg.jpg" class = "d-none d-lg-block img-fluid">
+          <div class="container">
+            <div class="carousel-caption text-start d-none d-lg-block carousel-text-bg rounded ps-3">
+              <h1>Minecraft</h1>
+              <p>Explore the world and make it your own in Minecraft.<br> New 1.20 update out now.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Store page</a></p>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img-folder/minecraft-img1.jpg" width="100%" height="auto">
-                <div class="container">
-                  <div class="carousel-caption text-start">
-                    <h1>Minecraft</h1>
-                    <p class="opacity-75">Explore the world and make it your own in Minecraft.<br> New 1.20 update out now.<p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Store page</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="img-folder/minecraft-img2.jpg" width="100%" height="auto">
-                <div class="container">
-                  <div class="carousel-caption text-start">
-                    <h1>Minecraft</h1>
-                    <p>Explore the world and make it your own in Minecraft.<br> New 1.20 update out now.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Store page</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="img-folder/minecraft-img3.jpg" width="100%" height="auto">
-                <div class="container">
-                  <div class="carousel-caption text-start">
-                    <h1>Minecraft</h1>
-                    <p>Explore the world and make it your own in Minecraft.<br> New 1.20 update out now.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Store page</a></p>
-                  </div>
-                </div>
-              </div>
+            <div class="beetle-greenbg text-start d-block d-lg-none px-3 py-1 mt-1 rounded">
+              <h2>Minecraft</h2>
+              <p class="opacity-75">Explore the world and make it your own in Minecraft.<br> New 1.20 update out now.<p>
+              <p><a class="btn btn-lg btn-primary" href="#">Store page</a></p>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img-folder/minecraft-img2.jpg" class = "d-block d-lg-none img-fluid">
+          <img src="img-folder/minecraft-img2-lg.jpg" class = "d-none d-lg-block img-fluid">
+          <div class="container">
+            <div class="carousel-caption text-start d-none d-lg-inline carousel-text-bg rounded ps-3">
+              <h1>Minecraft</h1>
+              <p>Explore the world and make it your own in Minecraft.<br> New 1.20 update out now.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Store page</a></p>
+            </div>
+            <div class="beetle-greenbg text-start d-block d-lg-none px-3 py-1 mt-1 rounded">
+              <h2>Minecraft</h2>
+              <p class="opacity-75">Explore the world and make it your own in Minecraft.<br> New 1.20 update out now.<p>
+              <p><a class="btn btn-lg btn-primary" href="#">Store page</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img-folder/minecraft-img3.jpg" class = "d-block d-lg-none img-fluid">
+          <img src="img-folder/minecraft-img3-lg.jpg" class = "d-none d-lg-block img-fluid">
+          <div class="container">
+            <div class="carousel-caption text-start d-none d-lg-block carousel-text-bg rounded ps-3">
+              <h1>Minecraft</h1>
+              <p>Explore the world and make it your own in Minecraft.<br> New 1.20 update out now.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Store page</a></p>
+            </div>
+            <div class="beetle-greenbg text-start d-block d-lg-none px-3 py-1 mt-1 rounded">
+              <h2>Minecraft</h2>
+              <p class="opacity-75">Explore the world and make it your own in Minecraft.<br> New 1.20 update out now.<p>
+              <p><a class="btn btn-lg btn-primary" href="#">Store page</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--List of games-->
+    <div class="container">
+      <div class="row row-cols-1 row-cols-lg-2 gy-3">
+        <div>
+          <img src="img-folder/overwatch-2.jpg" class="img-fluid">
+        </div>
+        <div>
+          <img src="img-folder/terraria.jpg" class="img-fluid">
+        </div>
+        <div>
+          <img src="img-folder/shapez-2.jpg" class="img-fluid">
+        </div>
+        <div>
+          <img src="img-folder/sea-of-thieves.jpg" class="img-fluid">
+        </div>
+        <div>
+          <img src="img-folder/super-meat-boy.jpg" class="img-fluid">
+        </div>
+        <div>
+          <img src="img-folder/rainbow-six-siege.jpg" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    
 
-        <!--Footer-->
-        <div id="footer-placeholder"></div>
-        <script>
-        $(function(){
-        $("#footer-placeholder").load("footer.html");
-        });
-        </script>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
+    <!--Footer-->
+    <div id="footer-placeholder"></div>
+    <script>
+    $(function(){
+    $("#footer-placeholder").load("footer.html");
+    });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
 </html> 
