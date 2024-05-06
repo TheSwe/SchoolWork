@@ -15,6 +15,10 @@
     background-color: #1b1b1ba8
 }
 
+.loginbg{
+    background-color: #174220;
+}
+
 
 /* Show description and buy button on hover for home page*/
 .game-div .game-desc-buy{
