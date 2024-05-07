@@ -1,7 +1,7 @@
 /* Custom colors */
 .beetle-greenbg {
     background-color: #002e0a;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .beetle-green {
     color: #002e0a;
@@ -13,4 +13,27 @@
 
 .carousel-text-bg{
     background-color: #1b1b1ba8
+}
+
+.loginbg{
+    background-color: #174220;
+}
+
+
+/* Show description and buy button on hover for home page*/
+.game-div .game-desc-buy{
+    display: none;
+}
+
+.game-div:hover .game-desc-buy{
+    display: block;
+}
+
+/* Navbar styles*/
+
+.underline-hover{
+    text-decoration: none;
+}
+.underline-hover:hover{
+    text-decoration: underline;
 }

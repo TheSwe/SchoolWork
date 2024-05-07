@@ -5,28 +5,38 @@ style.css
 bootstrap import
 bootstrap js import-->
 
-<nav class="navbar navbar-expand-md beetle-greenbg navbar-dark">
+<nav class="navbar navbar-expand-md beetle-greenbg navbar-dark" onload="alert('hi')">
     <div class="container-fluid">
       <img src="img-folder/logo64x64.png" alt="Logo" style="width: auto; height: 64px;" class="navbar-brand"> 
       <span class="navbar-brand fs-1">Beetle</span>
+      <div class="d-flex d-md-none">
+        <a href="cart.html"><img src="img-folder/cart.png" style="width: auto; height: 32px;"></a>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link underline-hover" href="index.html">Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item underline-hover">
             <a class="nav-link" href="store.html">Store</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item underline-hover">
             <a class="nav-link" href="library.html">Library</a>
           </li>    
-          <li class="nav-item">
-            <a class="nav-link" href="omoss.html">Om oss</a>
-          </li>   
+          <li class="nav-item underline-hover">
+            <a class="nav-link" href="login.html">Log in</a>
+          </li> 
         </ul>
+        <div class="ms-auto">
+          <div id="navbarname" class="ms-auto pe-4">name</div>
+          <div class="d-none d-md-block  pe-3">
+            <a href="cart.html"><img src="img-folder/cart.png" style="width: auto; height: 32px;"></a>
+          </div>
+        </div>
+        
       </div>
     </div>
   </nav>
