@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel=icon type=image/x-icon href="img-folder/favicon.ico">
+    <title>place123holder</title>
+
+    <link rel="stylesheet" href="style-folder/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js-folder/save-login.js"></script>
+    <script src="js-folder/cart.js"></script>
+
+  </head>
+  <body class="body-bg" onload="navbarname(); displaycart();">
+    <!--Navbar from file-->
+    <div id="nav-placeholder"></div>
+    <script>
+    $(function(){
+    $("#nav-placeholder").load("navbar.html");
+    });
+    </script>
+
+    <div class="container px-4 py-4">
+        <div class="row g-5">
+            <div class="col-12 col-md-6">
+                <div class="beetle-greenbg rounded p-3">
+                    <h2>In your cart:</h2>
+                    <ul class="list-group">
+                        <li id="minecraft-cart" class="list-group-item" style="display: none;">
+                            <img src="img-folder/minecraft-img1.jpg" class="img-fluid rounded">
+                            <p>Minecraft</p>
+                        </li>
+                        <li id="overwatch-2-cart" class="list-group-item" style="display: none;">
+                            <img src="img-folder/overwatch-2.jpg" class="img-fluid rounded">
+                            <p>Overwatch 2</p>
+                        </li>
+                        <li id="terraria-cart" class="list-group-item" style="display: none;">
+                            <img src="img-folder/terraria.jpg" class="img-fluid rounded">
+                            <p>Terraria</p>
+                        </li>
+                        <li id="sea-of-thieves-cart" class="list-group-item" style="display: none;">
+                            <img src="img-folder/sea-of-thieves.jpg" class="img-fluid rounded">
+                            <p>Sea of Thieves</p>
+                        </li>
+                        <li id="shapez-2-cart" class="list-group-item" style="display: none;">
+                            <img src="img-folder/shapez-2.jpg" class="img-fluid rounded">
+                            <p>Shapez 2</p>
+                        </li>
+                        <li id="super-meat-boy-cart" class="list-group-item" style="display: none;">
+                            <img src="img-folder/super-meat-boy.jpg" class="img-fluid rounded">
+                            <p>Super Meat Boy</p>
+                        </li>
+                        <li id="rainbow-six-siege-cart" class="list-group-item" style="display: none;">
+                            <img src="img-folder/rainbow-six-siege.jpg" class="img-fluid rounded">
+                            <p>Rainbow Six Siege</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="bg-light rounded p-3">
+                    <div>
+                        <p class="fw-bold">Payment Details</p>
+                        <p class="dis mb-3">Complete your purchase by providing your payment details</p>
+                    </div>
+                    <form action="">
+                        <div class="mb-3">
+                            <p class="dis fw-bold mb-2">Email address</p>
+                            <input class="form-control" type="email" value="luke@skywalker.com">
+                        </div>
+                        <div>
+                            <p class="dis fw-bold mb-2">Card details</p>
+                            <div class="d-flex align-items-center justify-content-between card-atm border rounded">
+                                <div class="fab fa-cc-visa ps-3"></div>
+                                <input type="text" class="form-control" placeholder="Card Details">
+                                <div class="d-flex w-50">
+                                    <input type="text" class="form-control px-0" placeholder="MM/YY">
+                                    <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV">
+                                </div>
+                            </div>
+                            <div class="my-3 cardname">
+                                <p class="dis fw-bold mb-2">Cardholder name</p>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="address">
+                                <p class="dis fw-bold mb-3">Billing address</p>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected hidden>United States</option>
+                                    <option value="1">India</option>
+                                    <option value="2">Australia</option>
+                                    <option value="3">Canada</option>
+                                </select>
+                                <div class="d-flex">
+                                    <input class="form-control zip" type="text" placeholder="ZIP">
+                                    <input class="form-control state" type="text" placeholder="State">
+                                </div>
+                                <div class=" my-3">
+                                    <p class="dis fw-bold mb-2">VAT Number</p>
+                                    <div class="inputWithcheck">
+                                        <input class="form-control" type="text" value="GB012345B9">
+                                        <span class="fas fa-check"></span>
+    
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column dis">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <p>Subtotal</p>
+                                        <p><span class="fas fa-dollar-sign"></span>33.00</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <p>VAT<span>(20%)</span></p>
+                                        <p><span class="fas fa-dollar-sign"></span>2.80</p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <p class="fw-bold">Total</p>
+                                        <p class="fw-bold"><span class="fas fa-dollar-sign"></span>35.80</p>
+                                    </div>
+                                    <div class="btn btn-primary mt-2">Pay<span class="fas fa-dollar-sign px-1"></span>35.80
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer-->
+    <div id="footer-placeholder"></div>
+    <script>
+    $(function(){
+    $("#footer-placeholder").load("footer.html");
+    });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html> 

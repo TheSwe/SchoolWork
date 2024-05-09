@@ -37,3 +37,8 @@
 .underline-hover:hover{
     text-decoration: underline;
 }
+
+/* Cart hide*/
+.cart-hide{
+    display: none;
+}

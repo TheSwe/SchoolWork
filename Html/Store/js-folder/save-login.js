@@ -1,12 +1,12 @@
 function login(form) {
-    alert(form.username.value)
-    sessionStorage.setItem("username", form.username.value);
+    let username = form.username.value;
+    sessionStorage.setItem("username", username);
+    document.getElementById("navbarname").textContent = username;
 }
-function loaddata(){
-    document.getElementById("output").innerHTML = sessionStorage.getItem("username");
-    alert(sessionStorage.getItem("username"))
-}
-function loadnavbar(){
-    alert(sessionStorage.getItem("username"))
-    document.getElementById("navbarname").innerHTML = sessionStorage.getItem("username");
+function navbarname(){
+    let name = sessionStorage.getItem("username");
+    if (name != null){
+        document.getElementById("navbarname").textContent = name
+        document.getElementById("navbarname2").textContent = name
+    }
 }
