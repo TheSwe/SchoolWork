@@ -49,3 +49,13 @@ function displaycart(){
         }
     }
 }
+
+function pay(){
+    if ("username" in sessionStorage){
+        alert("Payment successful")
+        return true;
+    } else {
+        alert("You need to be logged in to purchase")
+        return false;
+    }
+}

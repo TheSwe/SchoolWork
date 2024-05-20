@@ -27,7 +27,7 @@
       <!--Contents here-->
       <div class="container">
         <div class="row loginbg rounded mt-3 pt-2 pb-3">
-            <form>
+            <form id="login-form" onsubmit="return login('login-form');">
                 <h1 class="h3 mb-3 fw-normal text-light">Log in</h1>
             
                 <div class="form-floating">
@@ -35,7 +35,7 @@
                   <label for="username">Username<span class="required-field">*</span></label>
                 </div>
                 <div class="form-floating">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                  <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required>
                   <label for="floatingPassword">Password<span class="required-field">*</span></label>
                 </div>
             
@@ -50,7 +50,7 @@
 
                 <div class=" mb-3 required-field">Fields marked with * are required</div>
 
-                <button class="btn btn-primary w-100 py-2" type="button" onClick="login(this.form)">Sign in</button>
+                <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
               </form>
         </div>
       </div>
