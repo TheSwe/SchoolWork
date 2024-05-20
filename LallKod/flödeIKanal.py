@@ -1,4 +1,5 @@
-stepSize = 0.1
+stepSize = 0.01
+
 flowConstant = 0.5
 flowLinearIncrease = 0.66666666667
 
@@ -10,7 +11,7 @@ centerValue = 3
 currentValue = 0
 flowRateTotal = 0
 
-while currentValue <= centerValue:
+while currentValue < centerValue:
     flowRateTotal += (shapeConstant + shapeLinearIncrease*currentValue)*stepSize*(flowConstant + flowLinearIncrease*currentValue)
     print (flowRateTotal)
     currentValue += stepSize
