@@ -41,3 +41,22 @@
 .required-field{
     color:#ff8d85;
 }
+
+/*Show video on hover */
+.game-div .show-hover{
+    display: none;
+}
+.game-div:hover .show-hover{
+    display: inline;
+}
+.game-div .hide-hover{
+    display: inline;
+}
+.game-div:hover .hide-hover{
+    display: none;
+}
+.framecontainer {
+	aspect-ratio: 16 / 9;
+	height: 100%;
+	width: 100%;
+}
