@@ -1,4 +1,6 @@
 function addtocart(game){
+    //Takes input game name and adds it to sessionStorage to save it
+    //If sessionStorage username is empty creates an empty array and adds the game to it then adds it to sessionStorage
     if (!sessionStorage.getItem("cart")){
         const cart = [game];
         sessionStorage.setItem("cart", cart);
@@ -12,6 +14,7 @@ function addtocart(game){
 }
 
 function displaycart(){
+    //Creates array from session storage and displays all games that are in the cart
     const cart = sessionStorage.getItem("cart").split(",");
 
     let minecraft = document.getElementById("minecraft-cart");
@@ -51,6 +54,7 @@ function displaycart(){
 }
 
 function pay(){
+    //If user is logged in payment works
     if ("username" in sessionStorage){
         alert("Payment successful")
         return true;
