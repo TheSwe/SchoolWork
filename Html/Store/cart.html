@@ -18,19 +18,24 @@
   </head>
   <body class="body-bg" onload="navbarname(); displaycart();">
     <!--Navbar from file-->
+    <!--Loading navbar from file to make changes in the navbar easier to implement, this comes at a performance cost but is worth it at least during develompent-->
     <div id="nav-placeholder"></div>
+    <!--Using jQuery load function to load navbar-->
     <script>
     $(function(){
     $("#nav-placeholder").load("navbar.html");
     });
     </script>
-
+    <!--Container improves content width consistency over different window sizes using margins on the sides-->
     <div class="container px-4 py-4">
+        <!--g-5 determines gutter width, width between elements-->
         <div class="row g-5">
+            <!--two columns on large screens and on column on small screens-->
             <div class="col-12 col-md-6">
                 <div class="beetle-greenbg rounded p-3">
                     <h2>In your cart:</h2>
                     <ul class="list-group">
+                        <!--Only displayed if item is in cart-->
                         <li id="minecraft-cart" class="list-group-item" style="display: none;">
                             <img src="img-folder/minecraft-img1.jpg" class="img-fluid rounded">
                             <p>Minecraft</p>
@@ -63,7 +68,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 beetle-greenbg rounded">
-                
+                <!--Simple payment form-->
                 <form onsubmit="return pay();">
                     <h2 class="py-3">Payment</h2>
         
@@ -71,25 +76,25 @@
                     <div class="row gy-3">
                         <div class="col-md-6">
                             <label for="cc-name" class="form-label">Name on card</label>
-                            <input type="text" class="form-control" id="cc-name" required>
+                            <input type="text"  id="cc-name" required>
                         </div>
             
                         <div class="col-md-6">
                             <label for="cc-number" class="form-label">Credit card number</label>
-                            <input type="text" class="form-control" id="cc-number" required>
+                            <input type="text"  id="cc-number" required>
                         </div>
             
                         <div class="col-md-3">
                             <label for="cc-expiration" class="form-label">Expiration</label>
-                            <input type="text" class="form-control" id="cc-expiration" required>
+                            <input type="text"  id="cc-expiration" required>
                         </div>
             
                         <div class="col-md-3">
                             <label for="cc-cvv" class="form-label">CVV</label>
-                            <input type="text" class="form-control" id="cc-cvv" required>
+                            <input type="text"  id="cc-cvv" required>
                         </div>
                     </div>
-        
+                    <!--Separator-->
                     <hr class="my-3">
         
                     <button class="w-100 btn btn-primary btn-lg mb-3" type="submit">Continue to checkout</button>
