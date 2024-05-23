@@ -1,10 +1,10 @@
-stepSize = 0.01
+stepSize = 0.001
 
 flowConstant = 0.5
 flowLinearIncrease = 0.66666666667
 
-shapeConstant = 3
-shapeLinearIncrease = 0
+shapeConstant = 0
+shapeLinearIncrease = 1
 
 centerValue = 3
 
