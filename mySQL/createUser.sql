@@ -1,3 +1,5 @@
+use mediadb;
+
 
 create table user(
 userName varchar(255),

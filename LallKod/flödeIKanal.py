@@ -3,12 +3,12 @@ stepSize = 0.001
 flowConstant = 0.5
 flowLinearIncrease = 0.66666666667
 
-shapeConstant = 0
-shapeLinearIncrease = 1
+shapeConstant = 3
+shapeLinearIncrease = 0
 
 centerValue = 3
 
-currentValue = 0
+currentValue = 2
 flowRateTotal = 0
 
 while currentValue < centerValue:
