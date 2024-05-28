@@ -23,9 +23,6 @@ public class movies {
             case "2":
                 directorSearch(conn, scanner, username);
                 break;
-            case "3":
-                titleSearch(conn, scanner, username);
-                break;
             case "4":
                 addMovie(conn, scanner, username);
                 break;
@@ -80,14 +77,13 @@ public class movies {
             moviesMenu(conn, scanner, username);
         }
     }
-    public static void titleSearch(Connection conn, Scanner scanner, String username) throws SQLException{
-        
-    }
     public static void addMovie(Connection conn, Scanner scanner, String username) throws SQLException{
         
+
     }
     public static void markSeen(Connection conn, Scanner scanner, String username) throws SQLException{
-        
+        PreparedStatement stmt = conn.prepareStatement("insert into watchedlist values (?, ?)");
+
     }
     public static void printSeen(Connection conn, Scanner scanner, String username) throws SQLException{
         
