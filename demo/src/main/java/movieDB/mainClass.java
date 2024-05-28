@@ -16,23 +16,20 @@ public class mainClass {
         */
         String URL = "jdbc:mysql://localhost:3306/mediadb";
         Scanner scanner = new Scanner(System.in);
+        boolean loggedin;
         try {
             Connection conn = DriverManager.getConnection(URL, USER, PASS);
-            String query = "select userName, userAge from user";
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            System.out.println(rs.toString());
-            //System.out.println(rs.getString("title"));
-            String title;
-            while (rs.next()) {
-                title = rs.getString(1);
-                System.out.println(title);
+            while(true){
+                String username = login.loginMenu(conn, scanner);
+                System.out.println();
+                System.out.println("---Logged in as: "+username+"---");
+                System.out.println();
+
+                loggedin = true;
+                while (loggedin == true){
+                    loggedin = movies.moviesMenu(conn, scanner, username);
+                }
             }
-            String username = login.loginMenu(conn, scanner);
-            System.out.println();
-            System.out.println("---Logged in as: "+username+"---");
-            System.out.println();
-            movies.moviesMenu(conn, scanner, username);
             
         } catch (SQLException ex) {
             System.out.println(ex);

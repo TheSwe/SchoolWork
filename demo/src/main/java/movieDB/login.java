@@ -20,6 +20,7 @@ public class login {
             case "2":
                 return addUser(conn, scanner);
             case "3":
+                scanner.close();
                 System.exit(0);
             default:
                 System.out.println("Input incorrect, make sure to only include the number of the desired action");
