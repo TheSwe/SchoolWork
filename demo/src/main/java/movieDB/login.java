@@ -7,6 +7,7 @@ import java.sql.*;
 public class login {
 
     public static String loginMenu(Connection conn, Scanner scanner) throws SQLException{
+        //simple login menu
         System.out.println("1. Sign in");
         System.out.println("2. Register user");
         System.out.println("3. Close");
@@ -20,6 +21,8 @@ public class login {
             case "2":
                 return addUser(conn, scanner);
             case "3":
+                //conn.close();
+                //scanner.close();
                 System.exit(0);
             default:
                 System.out.println("Input incorrect, make sure to only include the number of the desired action");
@@ -28,6 +31,7 @@ public class login {
     }
 
     public static String userLogin(Connection conn, Scanner scanner) throws SQLException {
+        //checks if username and password combination exists within database
         System.out.println("Username:");
         String username = scanner.nextLine();
 
@@ -47,6 +51,8 @@ public class login {
     }
 
     public static String addUser(Connection conn, Scanner scanner) throws SQLException{
+        //adds user with parameters input
+        //makes sure username is not taken
         PreparedStatement stmt = conn.prepareStatement("insert into user (userName, userPassword, userEmail) values (?, ?, ?);");
 
         System.out.println("Username:");
