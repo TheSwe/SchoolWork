@@ -17,8 +17,11 @@ public class mainClass {
         String URL = "jdbc:mysql://localhost:3306/mediadb";
         Scanner scanner = new Scanner(System.in);
         boolean loggedin;
+        //try except to catch SQL exceptions
         try {
             Connection conn = DriverManager.getConnection(URL, USER, PASS);
+
+            //runs until program is exited
             while(true){
                 String username = login.loginMenu(conn, scanner);
                 System.out.println();
@@ -26,6 +29,7 @@ public class mainClass {
                 System.out.println();
 
                 loggedin = true;
+                //Runs until user wants to log out
                 while (loggedin == true){
                     loggedin = movies.moviesMenu(conn, scanner, username);
                 }

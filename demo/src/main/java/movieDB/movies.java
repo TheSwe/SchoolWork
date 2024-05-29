@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class movies {
     public static boolean moviesMenu(Connection conn, Scanner scanner, String username) throws SQLException{
+        //Simple menu to get to know what the user wants
         System.out.println("1. Search movie by release year");
         System.out.println("2. Search movie by director");
         System.out.println("3. Add movie to database");
@@ -19,32 +20,34 @@ public class movies {
         
         switch (action) {
             case "1":
-                releaseYearSearch(conn, scanner, username);
+                releaseYearSearch(conn, scanner);
                 break;
             case "2":
-                directorSearch(conn, scanner, username);
+                directorSearch(conn, scanner);
                 break;
             case "3":
-                addMovie(conn, scanner, username);
+                addMovie(conn, scanner);
                 break;
             case "4":
                 markSeen(conn, scanner, username);
                 break;
             case "5":
-                printSeen(conn, scanner, username);
+                printSeen(conn, username);
                 break;
             case "6":
                 System.out.println("Logging out");
                 return false;
             case "7":
-                scanner.close();
+                //conn.close();
+                //scanner.close();
                 System.exit(0);
             default:
                 System.out.println("Input incorrect, make sure to only include the number of the desired action");        
         }
         return true;
     }
-    public static void releaseYearSearch(Connection conn, Scanner scanner, String username) throws SQLException{
+    public static void releaseYearSearch(Connection conn, Scanner scanner) throws SQLException{
+        //searches by year, searches by string to avoid input throwing exceptions when test is written
         PreparedStatement stmt = conn.prepareStatement("select title,director,runtime from movies where releaseyear=?");
 
         System.out.println("Release year (XXXX):");
@@ -63,7 +66,8 @@ public class movies {
             
         }
     }
-    public static void directorSearch(Connection conn, Scanner scanner, String username) throws SQLException{
+    public static void directorSearch(Connection conn, Scanner scanner) throws SQLException{
+        //Searches for a director and prints all movies directed by that director
         PreparedStatement stmt = conn.prepareStatement("select title,releaseyear from movies where director=?");
 
         System.out.println("Director (Firstname Lastname):");
@@ -82,7 +86,8 @@ public class movies {
             
         }
     }
-    public static void addMovie(Connection conn, Scanner scanner, String username) throws SQLException{
+    public static void addMovie(Connection conn, Scanner scanner) throws SQLException{
+        //Inserts movies into database, asks for relevant info about movie then asks if the user wants to add another at the end
         PreparedStatement stmt = conn.prepareStatement("insert into movies (title, releaseyear, runtime, director) values (?,?,?,?)");
         String title;
         int releaseyear;
@@ -112,6 +117,8 @@ public class movies {
         }
     }
     public static void markSeen(Connection conn, Scanner scanner, String username) throws SQLException{
+        //Provides a way for the user to add movies to the seen list, these are added with the username to make different users having different seen lists possible
+        //If the search matches multiple movies the user is prompted to choose which one they would like to add
         PreparedStatement stmt = conn.prepareStatement("insert into watchedlist values (?, ?)");
         PreparedStatement stmtMovie = conn.prepareStatement("select ID,title from movies where title like ? ");
 
@@ -149,7 +156,8 @@ public class movies {
             
         }
     }
-    public static void printSeen(Connection conn, Scanner scanner, String username) throws SQLException{
+    public static void printSeen(Connection conn, String username) throws SQLException{
+        //Gets all movies seen by the logged in user from the watchedlist table joined to the movies table to make printing more information about the movie possible. 
         PreparedStatement stmt = conn.prepareStatement("select movies.title, movies.releaseyear, movies.director from watchedlist inner join movies on watchedlist.id=movies.id where userName = ? order by movies.releaseyear asc");
         stmt.setString(1, username);
         ResultSet watched = stmt.executeQuery();
