@@ -50,10 +50,21 @@ public class movies {
         //searches by year, searches by string to avoid input throwing exceptions when test is written
         PreparedStatement stmt = conn.prepareStatement("select title,director,runtime from movies where releaseyear=?");
 
-        System.out.println("Release year (XXXX):");
-        String searchYear = scanner.nextLine();
+        int searchYear = 0;
+        System.out.println("When was the movie released?");
+            if (scanner.hasNextInt()){
+                searchYear = scanner.nextInt();
+            }
+            scanner.nextLine();
+            while(searchYear < 1901 || searchYear > 2155){
+                System.out.println("The database only accepts movies released after 1901, try again");
+                if (scanner.hasNextInt()){
+                    searchYear = scanner.nextInt();
+                }
+                scanner.nextLine();
+            }
 
-        stmt.setString(1, searchYear);
+        stmt.setInt(1, searchYear);
         ResultSet rs = stmt.executeQuery();
         if (rs.isBeforeFirst()){
 
@@ -62,7 +73,7 @@ public class movies {
             }
             
         } else {
-            System.out.println("No movies in the database where released in"+searchYear);
+            System.out.println("No movies in the database where released in "+searchYear);
             
         }
     }
@@ -90,31 +101,33 @@ public class movies {
         //Inserts movies into database, asks for relevant info about movie then asks if the user wants to add another at the end
         PreparedStatement stmt = conn.prepareStatement("insert into movies (title, releaseyear, runtime, director) values (?,?,?,?)");
         String title;
-        int releaseyear;
-        int runtime;
+        int releaseyear = 0;
+        int runtime = 0;
         String director;
         String add = "Y";
         while (add == "Y"){
             System.out.println("What is the movies name?");
             title = scanner.nextLine();
             stmt.setString(1, title);
-            System.out.println("When was the movie released?");
 
-
-            releaseyear = scanner.nextInt();
-            stmt.setInt(2, releaseyear);
             System.out.println("When was the movie released?");
-            runtime = scanner.nextInt();
-            while(runtime < 30 || runtime > 300){
-                System.out.println("The database only accepts movies between 30 and 300 minutes in length, try again");
-                runtime = scanner.nextInt(); 
+            if (scanner.hasNextInt()){
+                releaseyear = scanner.nextInt();
+            }
+            while(releaseyear < 1901 || releaseyear > 2155){
+                System.out.println("The database only accepts movies released after 1901, try again");
+                if (scanner.hasNextInt()){
+                    releaseyear = scanner.nextInt();
+                }
                 scanner.nextLine();
             }
+            stmt.setInt(2, releaseyear);
 
             System.out.println("How long is the movie in minutes?");
             if (scanner.hasNextInt()){
                 runtime = scanner.nextInt();
             }
+            scanner.nextLine();
             while(runtime < 30 || runtime > 300){
                 System.out.println("The database only accepts movies between 30 and 300 minutes in length, try again");
                 if (scanner.hasNextInt()){
@@ -123,6 +136,7 @@ public class movies {
                 scanner.nextLine();
             }
             stmt.setInt(3, runtime);
+
             System.out.println("Who directed the movie?");
             director = scanner.nextLine();
             stmt.setString(4, director);
@@ -154,21 +168,33 @@ public class movies {
         if (titleList.isEmpty()){
             System.out.println("Your search doesn't match any movies in the database.");
             
-        } else if (titleList.size() == 1){
+        }/*  else if (titleList.size() == 1){
             stmt.setInt(2,idList.get(0));
             stmt.executeUpdate();
             System.out.println(titleList.get(0)+" was added to your watched movies");
             
-        } else{
-            System.out.println("Your search matched multiple movies");
+        } */else{
+            System.out.println("Your search matched this/these movies");
             for (int i = 1;  i <= titleList.size(); i++){
                 System.out.println(i+": "+titleList.get(i-1));
             }
-            System.out.println("Write the number of the movie you would like to add to your watched movies.");
-            int movieindex = scanner.nextInt()-1;
-            stmt.setInt(2, idList.get(movieindex));
-            stmt.executeUpdate();
-            
+            System.out.println("Write the number of the movie you would like to add to your watched movies or 0 to add none");
+            if (!scanner.hasNextInt()){
+                System.out.println("No movie was added to the seen list");
+                scanner.nextLine();
+            } else{
+                int movieindex = scanner.nextInt()-1;
+                scanner.nextLine();
+                if (movieindex < 0 || movieindex >= titleList.size()){
+                    System.out.println("No movie was added to the seen list");
+                } else {
+                    stmt.setInt(2, idList.get(movieindex));
+                    stmt.executeUpdate();
+                    System.out.println(titleList.get(movieindex)+" was added to seen list");
+                }
+                    
+            }
+
         }
     }
     public static void printSeen(Connection conn, String username) throws SQLException{

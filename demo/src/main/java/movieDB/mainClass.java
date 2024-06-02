@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.sql.*;
 
 public class mainClass {
-    public static void main(String[] args) {
+    public static void main(String [] args) {
         String USER = "root";  // username in mysql
         String PASS = "DASE32&&g";// password to mysql
         /*  URL i want to connect to where:
@@ -36,7 +36,8 @@ public class mainClass {
             }
             
         } catch (SQLException ex) {
-            System.out.println(ex);
+            System.out.println("SQL error "+ex+ " was caught, restarting program");
+            main(args);
         }
     }
 }
