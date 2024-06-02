@@ -46,7 +46,7 @@ public class login {
             return username;
         } else {
             System.out.println("Wrong username or password, try again");
-            return userLogin(conn, scanner);
+            return loginMenu(conn, scanner);
         }
     }
 

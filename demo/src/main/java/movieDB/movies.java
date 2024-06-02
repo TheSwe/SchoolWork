@@ -99,13 +99,28 @@ public class movies {
             title = scanner.nextLine();
             stmt.setString(1, title);
             System.out.println("When was the movie released?");
+
+
             releaseyear = scanner.nextInt();
             stmt.setInt(2, releaseyear);
-            System.out.println("How long is the movie in minutes?");
+            System.out.println("When was the movie released?");
             runtime = scanner.nextInt();
             while(runtime < 30 || runtime > 300){
                 System.out.println("The database only accepts movies between 30 and 300 minutes in length, try again");
+                runtime = scanner.nextInt(); 
+                scanner.nextLine();
+            }
+
+            System.out.println("How long is the movie in minutes?");
+            if (scanner.hasNextInt()){
                 runtime = scanner.nextInt();
+            }
+            while(runtime < 30 || runtime > 300){
+                System.out.println("The database only accepts movies between 30 and 300 minutes in length, try again");
+                if (scanner.hasNextInt()){
+                    runtime = scanner.nextInt();
+                }
+                scanner.nextLine();
             }
             stmt.setInt(3, runtime);
             System.out.println("Who directed the movie?");
