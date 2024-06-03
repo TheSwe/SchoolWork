@@ -36,8 +36,7 @@ public class mainClass {
             }
             
         } catch (SQLException ex) {
-            System.out.println("SQL error "+ex+ " was caught, restarting program");
-            main(args);
+            System.out.println("SQL error "+ex+ " was caught, closing program");
         }
     }
 }

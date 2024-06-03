@@ -113,6 +113,7 @@ public class movies {
             System.out.println("When was the movie released?");
             if (scanner.hasNextInt()){
                 releaseyear = scanner.nextInt();
+                scanner.nextLine();
             }
             while(releaseyear < 1901 || releaseyear > 2155){
                 System.out.println("The database only accepts movies released after 1901, try again");
